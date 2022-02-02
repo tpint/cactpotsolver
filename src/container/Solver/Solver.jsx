@@ -1,16 +1,69 @@
 import React from "react";
 import styled from "styled-components";
-import "./Solver.css";
-const Button = styled.button`
+// import "./Solver.css";
+const SolverDisplay = styled.div`
+  background: pink;
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  /* color: palevioletred; */
+  /* margin: 0 1em; */
+  /* padding: 0.25em 1em; */
+  width: 100%;
+  height: 90vh;
+  display: flex;
+`;
+const SolverDisplayStart = styled.div`
+  width: 75%;
   background: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const SolverDisplayEnd = styled.div`
+  width: 25%;
+  background: pink;
+`;
+const Board = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  background: yellow;
   border-radius: 3px;
   border: 2px solid palevioletred;
   color: palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
+  /* margin: 0 1em;
+  padding: 0.25em 1em; */
+  width: 600px;
+  height: 600px;
+`;
+const Square = styled.div`
+  background: blue;
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  color: palevioletred;
+  /* margin: 0 1em;
+  padding: 0.25em 1em; */
+  width: 33%;
+  height: 33%;
+  /* flex-grow; 1; */
 `;
 const Solver = () => (
-  <div className="app__solver">
+  <SolverDisplay>
+    <SolverDisplayStart>
+      <Board>
+        <Square>1</Square>
+        <Square>2</Square>
+        <Square>3</Square>
+        <Square>4</Square>
+        <Square>5</Square>
+        <Square>6</Square>
+        <Square>7</Square>
+        <Square>8</Square>
+        <Square>9</Square>
+      </Board>
+    </SolverDisplayStart>
+    <SolverDisplayEnd>x</SolverDisplayEnd>
+  </SolverDisplay>
+  /*   <div className="app__solver">
     <Button>stupid</Button>
     <div className="app__solver-selectionbox">
       <select name="box1">
@@ -122,7 +175,7 @@ const Solver = () => (
         <option selected value=""></option>
       </select>
     </div>
-  </div>
+  </div> */
 );
 
 export default Solver;
