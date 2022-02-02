@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import { Solver } from './container';
-import { Navbar } from './components';
-import './App.css';
+import { Solver } from "./container";
+import { Navbar } from "./components";
+import "./App.css";
 
 const App = () => (
   <div>

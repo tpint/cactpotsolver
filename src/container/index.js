@@ -1,7 +1,3 @@
+import Solver from "./Solver/Solver";
 
-import Solver from './Solver/Solver';
-
-export {
-
-  Solver,
-};
+export { Solver };
